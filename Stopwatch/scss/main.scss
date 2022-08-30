@@ -1,0 +1,60 @@
+@import "./variables";
+
+@mixin textStyle(){
+    text-align: center;
+    margin-bottom: 20px;
+    color: $color-two;
+}
+
+@mixin buttonStyle(){
+    width:250px;
+    height: 50px;
+    border-radius: 20px;
+    border:none;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: $font-family;
+    color: $button-text-color;
+}
+
+body{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    background-color: $color-one;
+    font-family: $font-family;
+    
+}
+main{
+    position:absolute;
+    top:20%;
+}
+
+span{
+    @include textStyle();
+    font-size: 35px;
+}
+h1{
+    @include textStyle();
+}
+p{
+    text-align: center;
+}
+
+#start-btn{
+    @include buttonStyle();
+    background-color: $start-btn-color;
+
+}
+
+#stop-btn{
+    @include buttonStyle();
+    background-color: $stop-btn-color;
+}
+
+#reset-btn{
+    @include buttonStyle();
+    background-color: $reset-btn-color;
+}
