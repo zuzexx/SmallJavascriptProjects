@@ -1,0 +1,57 @@
+@import "./variables";
+
+@mixin buttonStyle($backgound-color){
+    height: 50px;
+    width:30%;
+    margin-left:2vw;
+    margin-top: 10vh;
+    border:none;
+    background-color: $backgound-color;
+
+    &:hover{
+        cursor: pointer;
+        border-radius: 20px;
+        font-size: 20px;
+    }
+}
+
+main{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width:100%
+}
+
+#text{
+    text-align: center;
+    margin-top: 10vh;
+    font-size: 18px;
+}
+
+#rock{
+    @include buttonStyle($rock-color);
+}
+
+#paper{
+    @include buttonStyle($paper-color);
+}
+
+#scissors{
+    @include buttonStyle($scissors-color);
+}
+#result{
+    color:green;
+    text-align: left;
+    font-size: 30px;
+    margin-top: 40px;
+    margin-left: 20px;
+}
+
+#computer{
+    color:red;
+    text-align: right;
+    margin-top: -30px;
+    margin-right: 20px;
+    font-size: 30px;
+}

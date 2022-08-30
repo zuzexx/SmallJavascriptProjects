@@ -1,0 +1,71 @@
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+#text {
+  text-align: center;
+  margin-top: 10vh;
+  font-size: 18px;
+}
+
+#rock {
+  height: 50px;
+  width: 30%;
+  margin-left: 2vw;
+  margin-top: 10vh;
+  border: none;
+  background-color: #948C75;
+}
+#rock:hover {
+  cursor: pointer;
+  border-radius: 20px;
+  font-size: 20px;
+}
+
+#paper {
+  height: 50px;
+  width: 30%;
+  margin-left: 2vw;
+  margin-top: 10vh;
+  border: none;
+  background-color: #D9CEB2;
+}
+#paper:hover {
+  cursor: pointer;
+  border-radius: 20px;
+  font-size: 20px;
+}
+
+#scissors {
+  height: 50px;
+  width: 30%;
+  margin-left: 2vw;
+  margin-top: 10vh;
+  border: none;
+  background-color: #D5DED9;
+}
+#scissors:hover {
+  cursor: pointer;
+  border-radius: 20px;
+  font-size: 20px;
+}
+
+#result {
+  color: green;
+  text-align: left;
+  font-size: 30px;
+  margin-top: 40px;
+  margin-left: 20px;
+}
+
+#computer {
+  color: red;
+  text-align: right;
+  margin-top: -30px;
+  margin-right: 20px;
+  font-size: 30px;
+}/*# sourceMappingURL=main.css.map */

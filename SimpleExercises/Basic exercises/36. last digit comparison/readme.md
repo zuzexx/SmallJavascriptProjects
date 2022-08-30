@@ -1,0 +1,1 @@
+Write a JavaScript program to check whether the last digit of the three given positive integers is same.

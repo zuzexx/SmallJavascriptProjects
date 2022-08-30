@@ -1,0 +1,1 @@
+Exercises found here: https://www.w3resource.com/javascript-exercises/javascript-conditional-statements-and-loops-exercises.php
