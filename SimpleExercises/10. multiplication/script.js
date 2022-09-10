@@ -1,21 +1,15 @@
+function multiply(num1, num2) {
+  let result = num1 * num2;
+  return `Multiplication of ${num1} and ${num2} results in ${result}`;
+}
 
-let multiply = document.getElementById("multiply")
-let divide = document.getElementById("divide")
-let result = document.getElementById("result")
+function divide(num1, num2) {
+  if (num2 == 0) {
+    return console.log("please use a number other than 0 for num2");
+  }
+  let result = num1 / num2;
+  return `Division of ${num1} with ${num2} results in ${result}`;
+}
 
-//result.textContent="hello"
-
-multiply.addEventListener("click", function(){
-    let firstNum = document.getElementById("first-num").value
-    let secondNum = document.getElementById("second-num").value
-    let multi = firstNum*secondNum
-     result.textContent= `${multi}`
-})
-
-divide.addEventListener("click", function(){
-    let firstNum = document.getElementById("first-num").value
-    let secondNum = document.getElementById("second-num").value
-    let multi = firstNum/secondNum
-     result.textContent= `${multi}`
-})
-
+console.log(divide(8, 4));
+console.log(multiply(2, 9));
