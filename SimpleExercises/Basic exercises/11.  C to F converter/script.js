@@ -1,20 +1,15 @@
-let cToFBtn = document.getElementById("ctof-btn")
-let fToCBtn = document.getElementById("ftoc-btn")
-let result = document.querySelector("#result")
-//result.innerHTML ="I am still not work"
+function CelsiusToF(celsius) {
+  let result = (5 * (celsius - 32)) / 9;
+  return result;
+}
+function FToCelsius(fahrenheit) {
+  let result = (9 * fahrenheit + 32 * 5) / 5;
+  return result;
+}
 
-cToFBtn.addEventListener("click", function(){
-    let input = document.getElementById("input").value
-    let cToF = (5*(input-32))/9
-
-    result.textContent=Math.floor(cToF)
-    
-})
-
-fToCBtn.addEventListener("click", function(){
-    let input = document.getElementById("input").value
-    let cToF = (9*input + (32*5))/5
-
-    result.textContent=Math.floor(cToF)
-    
-})
+console.log(CelsiusToF(10));
+console.log(FToCelsius(10));
+console.log(CelsiusToF(20));
+console.log(FToCelsius(20));
+console.log(CelsiusToF(30));
+console.log(FToCelsius(30));

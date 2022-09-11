@@ -1,24 +1,18 @@
 Write a JavaScript program to find the area of a triangle where lengths of the three of its sides are 5, 6, 7
 
-### Solution:
-The first challenge was finding the right equation for the triangle area. If you have all three lenghts of the sides, then the best equation to use is Heron's formula. 
 
-I defined the three lenghts as constants and defined another constant named s. I got s from the sum of lenghts divided by 2. After that all i had to do is write a new constant, that would be the result of Heron's formula. I got the formula from [Britannnica](https://www.britannica.com/science/Herons-formula).
-
-
-### Final code:
+### Solution - JavaScript:
 
 ```
-let text = document.getElementById("text")
+function TriangleArea(a, b, c) {
+  const s = (a + b + c) / 2;
 
-const a = 5
-const b = 6
-const c = 7
-const s = (a+b+c)/2
+  const area = Math.sqrt(s * (s - a) * (s - b) * (s - c));
+  return ` Area of a triangle with the lenghts of it's sides: ${a}, ${b} and ${c} is ${area}`;
+}
 
-let area = Math.sqrt(s*(s-a)*(s-b)*(s-c))
-
-
-text.textContent =  Area of a triangle with the lenghts of it's sides: ${a}, ${b} and ${c} is ${area}
-
+console.log(TriangleArea(2, 2, 2));
+console.log(TriangleArea(1, 2, 3));
+console.log(TriangleArea(4, 5, 6));
+console.log(TriangleArea(5, 7, 10));
 ```
