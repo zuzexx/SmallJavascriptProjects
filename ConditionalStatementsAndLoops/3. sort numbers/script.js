@@ -1,30 +1,27 @@
-let text = document.getElementById("text");
-const a = 12;
-const b = 8;
-const c = -7;
-
-function compare(){
-
-    if(a>b && a>c){
-        if (b>c){
-            text.textContent = `${a}, ${b}, ${c}`
-        } else{
-            text.textContent = `${a}, ${c}, ${b}`
-        }
+function compare(a, b, c) {
+  if (a > b && a > c) {
+    if (b > c) {
+      return `${a}, ${b}, ${c}`;
+    } else {
+      return `${a}, ${c}, ${b}`;
     }
-    if (b>a && b>c){
-        if (a>c){
-            text.textContent = `${b}, ${a}, ${c}`
-        } else{
-            text.textContent = `${b}, ${c}, ${a}`
-        }
-    } if (c>a && c>b){
-        if (a>b){
-            text.textContent = `${c}, ${a}, ${b}`
-        } else {
-            text.textContent = `${c}, ${b}, ${a}`
-        }
+  }
+  if (b > a && b > c) {
+    if (a > c) {
+      return `${b}, ${a}, ${c}`;
+    } else {
+      return `${b}, ${c}, ${a}`;
     }
-
+  }
+  if (c > a && c > b) {
+    if (a > b) {
+      return `${c}, ${a}, ${b}`;
+    } else {
+      return `${c}, ${b}, ${a}`;
+    }
+  }
 }
-compare();
+
+console.log(compare(1, 2, 3));
+console.log(compare(3, 1, 2));
+console.log(compare(2, 3, 1));

@@ -1,23 +1,22 @@
-let text = document.getElementById("text");
-const a = 1;
-const b = 2;
-const c = -3;
-
-function sign(){
-
-    if(a<0 && b <0 && c <0){
-        text.textContent =`the sign is -`
-    }else if (a<0 && b<0 && c>0){
-        text.textContent =`the sign is +`
-    } else if (a<0 && b>0 && c>0){
-        text.textContent =`the sign is -`
-    }else if (a<0 && b>0 && c<0){
-        text.textContent =`the sign is +`
-    } else if (a>0 && b>0 && c<0){
-        text.textContent =`the sign is -`
-    }else{
-        text.textContent =`the sign is +`
-    }
-
+function sign(a, b, c) {
+  if (a < 0 && b < 0 && c < 0) {
+    return `the sign is -`;
+  } else if (a < 0 && b < 0 && c > 0) {
+    return `the sign is +`;
+  } else if (a < 0 && b > 0 && c > 0) {
+    return `the sign is -`;
+  } else if (a < 0 && b > 0 && c < 0) {
+    return `the sign is +`;
+  } else if (a > 0 && b > 0 && c < 0) {
+    return `the sign is -`;
+  } else {
+    return `the sign is +`;
+  }
 }
-sign();
+console.log(sign(1, 2, 3));
+console.log(sign(-1, 2, 3));
+console.log(sign(-1, -2, 3));
+console.log(sign(-1, -2, -3));
+console.log(sign(1, -2, 3));
+console.log(sign(1, -2, -3));
+console.log(sign(1, 2, -3));
