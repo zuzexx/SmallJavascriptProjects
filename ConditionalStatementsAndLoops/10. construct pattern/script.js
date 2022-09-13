@@ -1,10 +1,11 @@
-let text = document.getElementById("text");
-let star 
+let star = [];
 
-for (let i = 1; i < 7; i++){
-    for(let a = 1; a < i; a++){
-        star += `*`;
-    }
-    text.innerText = `${star}`;
-    star = '';
+for (let i = 1; i < 7; i++) {
+  for (let a = 1; a < i; a++) {
+    star.push(`*`);
+  }
+
+  star.push("");
 }
+
+console.log(star);
