@@ -40,8 +40,12 @@ Book.prototype.sellBook = function (soldCopies = 1) {
 };
 
 Book.prototype.restockBook = function (restockedCopies = 10) {
-  this.currentCopies += restockedCopies;
-  return `You restocked ${this.title}, there is now ${this.currentCopies} copies`;
+  if (restockedCopies > 0) {
+    this.currentCopies += restockedCopies;
+    return `You restocked ${this.title}, there is now ${this.currentCopies} copies`;
+  } else {
+    return "The number of restocked copies is negative.";
+  }
 };
 
 const firstBook = new Book("The best Book", "mrs. Author", 123456567, 0);
@@ -50,7 +54,7 @@ const thirdBook = new Book("The best Book", "mrs. Author", 123456567, 5);
 
 console.log(firstBook.restockBook());
 console.log(secondBook.restockBook(5));
-console.log(thirdBook.restockBook(16));
+console.log(thirdBook.restockBook(-16));
 
 console.log(firstBook.getAvailability());
 console.log(secondBook.getAvailability());
